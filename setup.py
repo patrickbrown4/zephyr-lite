@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 def parse_requirements(filename):
     with open(os.path.join(here, filename)) as f:
         reqs = [
-            line.strip(' -')
+            line.strip(' -').replace('>',' ').replace('=',' ').split(' ')[0]
             for line in f.read().splitlines()
             if not any([line.strip(' -').startswith(i) for i in [
                 '#', 'name', 'dependencies', 'pip', 'channels', 'defaults', 'conda',
