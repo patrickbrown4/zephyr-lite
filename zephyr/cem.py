@@ -8,7 +8,7 @@ import pulp
 #%%### Functions
 
 def cem(system, return_model=False, solver=None, hours=None,
-        verbose=True, savename=None, includedual=False, includereserves=False,
+        verbose=0, savename=None, includedual=False, includereserves=False,
         **solverkwargs):
     """
     """
@@ -25,7 +25,7 @@ def cem(system, return_model=False, solver=None, hours=None,
         solver = pulp.GUROBI_CMD(msg=(1 if verbose in [2,3] else 0),
                                  options=solverkwargs.items())
     elif solver in ['cbc', 'default', 'coin', 'clp', None]:
-        solver = pulp.PULP_CBC_CMD()
+        solver = pulp.PULP_CBC_CMD(msg=(True if verbose else False))
     elif solver in ['gurobipy']:
         solver = pulp.GUROBI()
 

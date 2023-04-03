@@ -21,7 +21,7 @@ def pcm(system, solver=None, hours=None, verbose=2, includedual=True, **solverkw
             msg=(1 if verbose in [2, 3] else 0), options=solverkwargs.items()
         )
     elif solver in ["cbc", "default", "coin", "clp", None]:
-        solver = pulp.PULP_CBC_CMD(msg=0)
+        solver = pulp.PULP_CBC_CMD(msg=False)
     elif solver in ["gurobipy"]:
         solver = pulp.GUROBI()
 
