@@ -1,0 +1,21 @@
+# mac stuff
+*.DS_Store
+
+# python cache files
+*.pyc
+*__pycache__/
+
+# VScode files
+.vscode/
+
+# log files
+*.log
+
+# python environment files
+env/
+
+# office temp files
+~$*
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
