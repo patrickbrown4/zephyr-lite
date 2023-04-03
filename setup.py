@@ -24,7 +24,7 @@ setup(
     author_email='prbrown@mit.edu',
     url='https://github.com/patrickbrown4/zephyr-lite',
     license='MIT',
-    packages=['zephyr'],
+    packages=['zephyr-lite'],
     install_requires=parse_requirements('environment.yml'),
     classifiers=[
         'License :: OSI Approved :: MIT License',
