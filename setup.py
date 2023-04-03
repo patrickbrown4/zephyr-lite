@@ -10,6 +10,7 @@ def parse_requirements(filename):
             for line in f.read().splitlines()
             if not any([line.strip(' -').startswith(i) for i in [
                 '#', 'name', 'dependencies', 'pip', 'channels', 'defaults', 'conda',
+                'python',
             ]])
         ]
     return reqs
