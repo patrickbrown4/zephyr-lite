@@ -8,10 +8,12 @@ site.addsitedir(os.path.dirname(os.path.dirname(__file__)))
 import zephyr
 
 #%% Inputs
-### Path to a local copy of https://github.com/GridMod/RTS-GMLC
+## Path to a local copy of https://github.com/GridMod/RTS-GMLC
 rtspath = os.path.expanduser('~/github/RTS-GMLC')
-defaultsfile = os.path.join(
-    zephyr.settings.projpath, 'io', 'generator_fuel_assumptions.xlsx')
+## Path to generator assumptions excel file from
+## https://github.com/patrickbrown4/zephyr/blob/pcm/io/generator_fuel_assumptions.xlsx
+defaultsfile = os.path.expanduser(
+    '~/github/zephyr/io/generator_fuel_assumptions.xlsx')
 
 #%%### Functions
 def create_system(rtspath, defaultsfile):
