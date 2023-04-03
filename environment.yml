@@ -1,7 +1,7 @@
 name: zephyrlite
-channels:
-  - defaults
-  - conda-forge
+# channels:
+#   - defaults
+#   - conda-forge
 dependencies:
   - python>=3.9.0
   - numpy>=1.19.1
