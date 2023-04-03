@@ -17,14 +17,14 @@ def parse_requirements(filename):
 
 
 setup(
-    name='zephyr-lite',
+    name='zephyr',
     version='0.1.0',
     description='Zero-emissions Electricity system Planning with HourlY operational Resolution',
     author='Patrick Brown',
     author_email='prbrown@mit.edu',
     url='https://github.com/patrickbrown4/zephyr-lite',
     license='MIT',
-    packages=['zephyr-lite'],
+    packages=['zephyr'],
     install_requires=parse_requirements('environment.yml'),
     classifiers=[
         'License :: OSI Approved :: MIT License',
